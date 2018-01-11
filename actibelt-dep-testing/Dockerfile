@@ -4,7 +4,7 @@ FROM continuumio/miniconda3:latest
 
 # Python packages from conda
 RUN conda install -q -y -c conda-forge \
-    make gxx_linux-64 numpy xarray pandas matplotlib six rpy2=2.9
+    make gxx_linux-64 gfortran_linux-64 numpy xarray pandas matplotlib six rpy2=2.9
 
 # matplotlib config
 RUN mkdir -p /root/.config/matplotlib

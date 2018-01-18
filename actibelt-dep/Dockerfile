@@ -13,3 +13,6 @@ RUN conda install -y -q \
 # matplotlib config
 RUN mkdir -p /root/.config/matplotlib
 RUN echo "backend : Agg" > /root/.config/matplotlib/matplotlibrc
+
+# fonts for cairo
+RUN apt-get install -y xfonts-base

@@ -4,7 +4,7 @@ FROM continuumio/miniconda3:latest
 
 # python packages from conda
 RUN conda install -y -q -c conda-forge \
-    make gxx_linux-64 gfortran_linux-64 numpy xarray pandas matplotlib six
+    make gxx_linux-64 gfortran_linux-64 numpy xarray pandas matplotlib six click
 
 # R packages from conda
 RUN conda install -y -q \

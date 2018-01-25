@@ -14,3 +14,10 @@ RUN echo "backend : Agg" > /root/.config/matplotlib/matplotlibrc
 
 # fonts for cairo
 RUN apt-get install -y xfonts-base
+
+# packages for testing
+RUN conda install -y -q nose coverage
+
+# packages for building docs
+RUN conda install -y -q -c conda-forge \
+    make sphinx sphinx_rtd_theme sphinx-gallery numpydoc

@@ -3,12 +3,10 @@
 FROM continuumio/miniconda3:latest
 
 # python packages from conda
-RUN conda install -y -q -c conda-forge \
-    make gxx_linux-64 gfortran_linux-64 numpy xarray pandas matplotlib six click
+RUN conda install -y -q -c conda-forge numpy xarray pandas matplotlib six click
 
 # R packages from conda
-RUN conda install -y -q \
-     rpy2=2.9 r-e1071 r-r.utils r-lubridate r-cairo
+RUN conda install -y -q rpy2=2.9 r-e1071 r-r.utils r-lubridate r-cairo
 
 # matplotlib config
 RUN mkdir -p /root/.config/matplotlib

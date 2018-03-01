@@ -2,6 +2,8 @@
 
 FROM continuumio/miniconda3:latest
 
+RUN conda update -y conda
+
 # python packages from conda
 RUN conda install -yq -c conda-forge numpy xarray pandas matplotlib six click
 

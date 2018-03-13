@@ -16,8 +16,7 @@ RUN mkdir -p /root/.config/matplotlib
 RUN echo "backend : Agg" > /root/.config/matplotlib/matplotlibrc
 
 # fonts for cairo
-RUN apt-get update
-RUN apt-get install -y xfonts-base
+RUN apt-get update && apt-get install -y xfonts-base
 
 # packages for testing
 RUN conda install -y -q nose coverage

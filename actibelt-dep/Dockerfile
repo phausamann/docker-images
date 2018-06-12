@@ -10,7 +10,7 @@ RUN conda install -yq -c conda-forge numpy xarray pandas matplotlib six click
 # R packages from conda
 RUN conda install -yq -c conda-forge \
     rpy2 r-signal r-pracma r-cairo r-e1071 r-lubridate r-r.utils r-pixmap \
-    r-jsonlite r-httr
+    r-jsonlite r-httr r-spatstat
 
 # matplotlib config
 RUN mkdir -p /root/.config/matplotlib
